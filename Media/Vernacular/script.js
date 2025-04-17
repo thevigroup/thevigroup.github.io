@@ -1,7 +1,7 @@
 const proposalContainer = document.getElementById("proposal");
 
 async function fetchMarkdown() {
-  const url = 'https://raw.githubusercontent.com/thevigroup/thevigroup.github.io/refs/heads/main/Media/Vernacular/Vernacular.md%20';
+  const url = 'https://raw.githubusercontent.com/thevigroup/thevigroup.github.io/refs/heads/main/Media/Vernacular/Vernacular.md';
 
   try {
     const response = await fetch(url);

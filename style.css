@@ -1,30 +1,220 @@
-body {
-  font-family: 'Courier New', Courier, monospace;
-  background-color: #111;
-  color: #0f0;
+/* Reset styles */
+* {
   margin: 0;
-  padding: 40px;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f8f8f8;
+  padding: 40px 0;
   display: flex;
   justify-content: center;
-  align-items: flex-start;
-  min-height: 100vh;
+  align-items: center;
+  height: 100vh;
+  flex-direction: column;
 }
 
+/* Command-line container styling */
+.command-line-container {
+  text-align: center;
+  margin-bottom: 40px;
+  color: #333;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 20px;
+}
+
+.company-name h1 {
+  font-size: 36px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #2e3b4e;
+}
+
+/* Typing animation effect */
+.typing-effect p {
+  display: inline-block;
+  font-size: 18px;
+  color: #4b4b4b;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 4px solid #333;
+  width: 0;
+  animation: typing 6s steps(60) 1s forwards, blink 0.75s step-end infinite;
+}
+
+/* Animation for typing */
+@keyframes typing {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}
+
+/* Main container for all content */
 .container {
-  max-width: 800px;
-  width: 100%;
+  width: 90%;
+  max-width: 1200px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  background-color: #fff;
+  border-radius: 15px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
 }
 
-h1 {
-  color: #0ff;
-  margin-bottom: 20px;
+/* Product categories */
+.product-category h2 {
   font-size: 28px;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
 
-#proposal {
-  white-space: pre-wrap;
-  font-size: 16px;
-  border-left: 4px solid #0f0;
-  padding-left: 16px;
+/* Card container (horizontal scrolling) */
+.card-container {
+  display: flex;
+  overflow-x: auto;
+  gap: 20px;
+  padding: 10px 0;
+  scroll-behavior: smooth;
+  padding-bottom: 20px;
+  position: relative;
+}
+
+/* Card */
+.card {
+  background-color: #fff;
+  border-radius: 15px;
+  padding: 20px;
+  width: 270px;
+  height: 250px;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
+}
+
+/* Card titles */
+.card h3 {
+  font-size: 18px;
+  font-weight: 600;
+  color: #444;
+  margin-bottom: 10px;
+}
+
+.card p {
+  font-size: 14px;
+  color: #777;
   line-height: 1.5;
+}
+
+/* Hover effect for the cards */
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.1);
+}
+
+/* Scroll buttons styling */
+.scroll-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.1);
+  color: #fff;
+  border: none;
+  padding: 10px;
+  border-radius: 50%;
+  font-size: 20px;
+  cursor: pointer;
+  z-index: 10;
+  transition: background-color 0.3s ease;
+}
+
+.scroll-btn:hover {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.scroll-btn.left {
+  left: 10px;
+}
+
+.scroll-btn.right {
+  right: 10px;
+}
+
+/* Style for product category section */
+.product-category {
+  margin-bottom: 40px;
+}
+
+/* Scrollbar styling */
+.card-container::-webkit-scrollbar {
+  height: 8px;
+}
+
+.card-container::-webkit-scrollbar-thumb {
+  background-color: #bbb;
+  border-radius: 8px;
+}
+
+.card-container::-webkit-scrollbar-track {
+  background-color: #f0f0f0;
+}
+
+.product-category h2 {
+  color: #333;
+  font-size: 26px;
+}
+.contact-us {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 60px;
+}
+
+.contact-card {
+  background-color: #fff;
+  border-radius: 15px;
+  padding: 30px 40px;
+  max-width: 1000px;
+  width: 90%;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.contact-card h2 {
+  font-size: 26px;
+  color: #2e3b4e;
+  margin-bottom: 15px;
+}
+
+.contact-info div {
+  font-size: 16px;
+  color: #444;
+  margin-bottom: 8px;
+}
+
+.contact-info a {
+  color: #1a73e8;
+  text-decoration: none;
+}
+
+.contact-info a:hover {
+  text-decoration: underline;
 }

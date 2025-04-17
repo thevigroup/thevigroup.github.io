@@ -1,0 +1,35 @@
+# Proposal: Multilingual PDF Translation Platform with Language Toggle Bridge
+
+## Introduction
+This proposal outlines a platform designed to offer seamless translation of PDFs into Singapore's official languages: English, Chinese (Simplified and Traditional), Malay, and Tamil. By leveraging AI, the tool will ensure accurate and contextually appropriate translations while providing an intuitive language toggle bridge for users.
+
+## Objectives
+- Enable multilingual document translation  
+- Provide an interactive language toggle feature  
+- Ensure AI-powered translation accuracy  
+- Enhance user experience with a streamlined interface  
+
+## Current Problems
+- Limited language options in existing platforms  
+- Inaccurate translations that miss cultural nuances  
+- Difficult-to-use interfaces  
+
+## Solution
+The platform will extract text from PDFs, allow users to toggle between languages, and provide accurate, AI-powered translations. It will also offer downloadable translated documents.
+
+## System Workflow
+1. **PDF Text Extraction:** Upload and extract text  
+2. **Language Toggle:** Select and switch between target languages  
+3. **Translation Process:** AI-powered translation and preview  
+4. **Download:** Option to download translated documents
+
+## Impact & Benefits
+- Efficient document translation  
+- Accurate and culturally appropriate translations  
+- Seamless and user-friendly experience  
+- Improved accessibility and communication  
+
+## Conclusion
+The platform offers a powerful solution for translating documents between Singapore's official languages. With AI-driven translation and an easy-to-use interface, it enhances communication and promotes inclusivity across communities.
+
+**Video Demo:** [Vernacular Support - Watch Here](https://drive.google.com/file/d/1HGn1q9EgFtb8e4P0uP329G0G35fjYfhk/view?usp=sharing)

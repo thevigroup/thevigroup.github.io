@@ -1,8 +1,8 @@
 const proposalContainer = document.getElementById("proposal");
 
 async function fetchMarkdown() {
-  const url = 'https://raw.githubusercontent.com/barchart/marketdata-api-js/refs/heads/master/README.md';
-
+  const url = 'https://raw.githubusercontent.com/thevigroup/thevigroup.github.io/refs/heads/main/Media/Podcast/podcast.md%20';
+  
   try {
     const response = await fetch(url);
     const text = await response.text();

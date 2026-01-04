@@ -1,104 +1,188 @@
 <!DOCTYPE html>
-<html lang="en" >
-<head>
-  <meta charset="UTF-8">
-  <title>Main</title>
-  <link rel="stylesheet" href="./style.css">
-
-</head>
-<body>
-<!-- partial:index.partial.html -->
-<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Thevi Group Research</title>
-  <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Thevi Group Pte. Ltd. | Healthcare Research</title>
+  <meta name="description" content="Thevi Group Pte. Ltd. is a healthcare research firm specializing in early-stage and academic research collaborations in Singapore." />
+
+  <style>
+    :root {
+      --primary: #0f766e;
+      --secondary: #0f172a;
+      --light: #f8fafc;
+      --muted: #64748b;
+      --accent: #14b8a6;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Inter, sans-serif;
+      line-height: 1.6;
+      color: var(--secondary);
+      background: var(--light);
+    }
+
+    header {
+      background: linear-gradient(135deg, var(--secondary), var(--primary));
+      color: white;
+      padding: 4rem 1.5rem;
+    }
+
+    .container { max-width: 1100px; margin: 0 auto; }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 3rem;
+    }
+
+    nav h1 { font-size: 1.4rem; font-weight: 700; }
+    nav ul { list-style: none; display: flex; gap: 1.5rem; }
+    nav a { color: white; text-decoration: none; font-weight: 500; opacity: 0.9; }
+    nav a:hover { opacity: 1; text-decoration: underline; }
+
+    .hero { max-width: 700px; }
+    .hero h2 { font-size: 2.5rem; line-height: 1.2; margin-bottom: 1rem; }
+    .hero p { font-size: 1.1rem; opacity: 0.95; margin-bottom: 2rem; }
+
+    .btn {
+      display: inline-block;
+      background: var(--accent);
+      color: var(--secondary);
+      padding: 0.75rem 1.5rem;
+      border-radius: 999px;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    section { padding: 4rem 1.5rem; }
+    section h3 { font-size: 2rem; margin-bottom: 1rem; }
+    section p { max-width: 800px; color: var(--muted); margin-bottom: 2rem; }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 2rem;
+    }
+
+    .card {
+      background: white;
+      padding: 2rem;
+      border-radius: 1rem;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.06);
+    }
+
+    .card h4 { margin: 0.75rem 0 0.5rem; color: var(--primary); }
+
+    .video-card iframe {
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      border-radius: 0.75rem;
+      margin-bottom: 0.5rem;
+      border: none;
+    }
+
+    .logos { display: flex; flex-wrap: wrap; gap: 2rem; opacity: 0.8; }
+    .logo-box { background: white; padding: 1.5rem 2rem; border-radius: 0.75rem; font-weight: 600; }
+
+    footer { background: var(--secondary); color: #cbd5f5; padding: 2rem 1.5rem; font-size: 0.9rem; }
+  </style>
 </head>
 <body>
 
-  <!-- Command-line style animation container -->
-  <div class="command-line-container">
-    <div class="company-name">
-      <h1>Thevi Group Research</h1>
-    </div>
-    <div class="typing-effect">
-      <p id="typing-text"></p>
-    </div>
-  </div>
-
+<header>
   <div class="container">
-    <section class="product-category">
-      <h2>Media Production</h2>
-      <div class="card-container" id="media-production">
-        <div class="card">
-          <h3><a href="https://thevigroup.github.io/Media/Podcast" target="_blank">AI-Powered Podcast & Ad Generator</a></h3>
-          <p>Instantly create podcast content and ads using AI voice and script synthesis.</p>
-        </div>
-        <div class="card">
-          <h3><a href="https://thevigroup.github.io/Media/ad" target="_blank">AI-Driven Image-Based Ad Generator</a></h3>
-          <p>Generate visually engaging ads from product prompts or descriptions.</p>
-        </div>
-        <div class="card">
-          <h3><a href="https://thevigroup.github.io/Media/Vernacular" target="_blank">AI-Powered Vernacular Language Conversion Tool</a></h3>
-          <p>Translate and localize content into regional languages for broader reach.</p>
-        </div>
-      </div>
-      <button class="scroll-btn left" id="scroll-left-media">←</button>
-      <button class="scroll-btn right" id="scroll-right-media">→</button>
-    </section>
+    <nav>
+      <h1>Thevi Group Pte. Ltd.</h1>
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#videos">Demos</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
 
-    <section class="product-category">
-      <h2>Healthcare</h2>
-      <div class="card-container" id="healthcare">
-        <div class="card">
-          <h3>Rehab</h3>
-          <p>AI-assisted tools to support physical and mental rehabilitation programs with personalized tracking and exercises.</p>
-        </div>
-      </div>
-      <button class="scroll-btn left" id="scroll-left-healthcare">←</button>
-      <button class="scroll-btn right" id="scroll-right-healthcare">→</button>
-    </section>
-
-    <section class="product-category">
-      <h2>Education</h2>
-      <div class="card-container" id="education">
-        <div class="card">
-          <h3><a href="https://thevigroup.github.io/Education/Short-answer" target="_blank">Short-answer Grading</a></h3>
-          <p>Automatically assess brief student responses using NLP models.</p>
-        </div>
-        <div class="card">
-          <h3><a href="https://thevigroup.github.io/Education/Essay" target="_blank">Essay Grading</a></h3>
-          <p>Evaluate structure, clarity, and content with AI-powered scoring algorithms.</p>
-        </div>
-        <div class="card">
-          <h3>Peer Review</h3>
-          <p>Facilitate anonymous AI-augmented student feedback and suggestions.</p>
-        </div>
-      </div>
-      <button class="scroll-btn left" id="scroll-left-education">←</button>
-      <button class="scroll-btn right" id="scroll-right-education">→</button>
-    </section>
-
-    <section class="contact-us">
-      <div class="contact-card">
-        <h2>Contact Us</h2>
-        <div class="contact-info">
-          <div><strong>Address:</strong> 327 SERANGOON AVENUE 3 , #05-322 , SINGAPORE 550327</div>
-          <div><strong>Name:</strong> Viknesh</div>
-          <div><strong>Email:</strong> <a href="mailto:sviknesh97@gmail.com">sviknesh97@gmail.com</a></div>
-          <div><strong>Phone:</strong> <a href="tel:+6591454468">(+65) 91454468</a></div>
-        </div>
-      </div>
-    </section>
+    <div class="hero">
+      <h2>Healthcare Research with Real‑World Impact</h2>
+      <p>We specialise in healthcare research, early‑stage studies, and academic‑industry collaborations.</p>
+      <a href="#contact" class="btn">Work With Us</a>
+    </div>
   </div>
+</header>
 
-  <script src="script.js"></script>
-</body>
-</html>
-<!-- partial -->
-  <script  src="./script.js"></script>
+<section id="about">
+  <div class="container">
+    <h3>About Us</h3>
+    <p>Thevi Group Pte. Ltd. delivers high‑quality healthcare research supporting hospitals, academic institutions, and care campuses.</p>
+  </div>
+</section>
+
+<section id="services" style="background:#f1f5f9;">
+  <div class="container">
+    <h3>Our Specialisations</h3>
+    <div class="grid">
+      <div class="card"><h4>Healthcare Research</h4><p>Qualitative and quantitative healthcare research.</p></div>
+      <div class="card"><h4>Initial & Feasibility Studies</h4><p>Early‑stage validation and pilot studies.</p></div>
+      <div class="card"><h4>Academic Collaboration</h4><p>Applied research with universities and clinicians.</p></div>
+      <div class="card"><h4>Hospital & Campus Research</h4><p>Studies across hospital systems and care campuses.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="experience">
+  <div class="container">
+    <h3>Research Experience</h3>
+    <p>We have supported initial study projects with leading institutions in Singapore.</p>
+    <div class="logos">
+      <div class="logo-box">NUH</div>
+      <div class="logo-box">NUS (Academics)</div>
+      <div class="logo-box">SGH Care Campus</div>
+    </div>
+  </div>
+</section>
+
+<section id="videos" style="background:#f1f5f9;">
+  <div class="container">
+    <h3>Project Video Demonstrations</h3>
+    <p>Selected demonstrations from our healthcare research collaborations. Videos are for research demonstration purposes only and contain no patient-identifiable data.</p>
+
+    <div class="grid">
+      <div class="card video-card">
+        <iframe src="https://drive.google.com/file/d/1LC4wJ-eVUiJdD2vPjVp1CKmUJh6qheO2/preview" allowfullscreen></iframe>
+        <h4>Identifying Radiation Necrosis vs Tumor Progression (NUH)</h4>
+        <p>Demonstration from a National University Hospital collaboration focusing on radiological differentiation between radiation necrosis and tumour progression.</p>
+      </div>
+
+      <div class="card video-card">
+        <iframe src="https://drive.google.com/file/d/15FSDKFoi6rVxh0ymjBoapORPJacplj4R/preview" allowfullscreen></iframe>
+        <h4>Identifying Landmarks in Histopathology (NUS Academics)</h4>
+        <p>Academic research demo highlighting identification of key landmarks in histopathology images.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="container">
+    <h3>Contact Us</h3>
+    <p>Interested in collaboration or learning more about our research work?</p>
+    <a href="mailto:info@thevigroup.com" class="btn">Email Us</a>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <p>© <span id="year"></span> Thevi Group Pte. Ltd. All rights reserved.</p>
+  </div>
+</footer>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
 
 </body>
 </html>
